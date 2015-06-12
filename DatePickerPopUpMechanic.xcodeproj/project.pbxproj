@@ -13,6 +13,10 @@
 		1AD32E041B2B3B9100429AEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD32E031B2B3B9100429AEC /* Images.xcassets */; };
 		1AD32E071B2B3B9100429AEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD32E051B2B3B9100429AEC /* LaunchScreen.xib */; };
 		1AD32E131B2B3B9100429AEC /* DatePickerPopUpMechanicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD32E121B2B3B9100429AEC /* DatePickerPopUpMechanicTests.swift */; };
+		1AD32E1E1B2B418C00429AEC /* DatePickerPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD32E1D1B2B418C00429AEC /* DatePickerPopUp.xib */; };
+		1AD32E201B2B45E400429AEC /* DatePickerPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD32E1F1B2B45E400429AEC /* DatePickerPopUp.swift */; };
+		1AD32E221B2B475A00429AEC /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD32E211B2B475A00429AEC /* DatePickerViewController.swift */; };
+		1AD32E271B2B503D00429AEC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD32E261B2B503D00429AEC /* DateFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		1AD32E0C1B2B3B9100429AEC /* DatePickerPopUpMechanicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatePickerPopUpMechanicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD32E111B2B3B9100429AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD32E121B2B3B9100429AEC /* DatePickerPopUpMechanicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPopUpMechanicTests.swift; sourceTree = "<group>"; };
+		1AD32E1D1B2B418C00429AEC /* DatePickerPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerPopUp.xib; sourceTree = "<group>"; };
+		1AD32E1F1B2B45E400429AEC /* DatePickerPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPopUp.swift; sourceTree = "<group>"; };
+		1AD32E211B2B475A00429AEC /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		1AD32E261B2B503D00429AEC /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,8 @@
 		1AD32DF91B2B3B9100429AEC /* DatePickerPopUpMechanic */ = {
 			isa = PBXGroup;
 			children = (
+				1AD32E251B2B4F6000429AEC /* Model */,
+				1AD32E1C1B2B40BC00429AEC /* Controller */,
 				1AD32DFC1B2B3B9100429AEC /* AppDelegate.swift */,
 				1AD32DFE1B2B3B9100429AEC /* ViewController.swift */,
 				1AD32E001B2B3B9100429AEC /* Main.storyboard */,
@@ -110,6 +120,24 @@
 				1AD32E111B2B3B9100429AEC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AD32E1C1B2B40BC00429AEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AD32E1D1B2B418C00429AEC /* DatePickerPopUp.xib */,
+				1AD32E211B2B475A00429AEC /* DatePickerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1AD32E251B2B4F6000429AEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AD32E1F1B2B45E400429AEC /* DatePickerPopUp.swift */,
+				1AD32E261B2B503D00429AEC /* DateFormat.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD32E1E1B2B418C00429AEC /* DatePickerPopUp.xib in Resources */,
 				1AD32E021B2B3B9100429AEC /* Main.storyboard in Resources */,
 				1AD32E071B2B3B9100429AEC /* LaunchScreen.xib in Resources */,
 				1AD32E041B2B3B9100429AEC /* Images.xcassets in Resources */,
@@ -212,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD32E221B2B475A00429AEC /* DatePickerViewController.swift in Sources */,
+				1AD32E201B2B45E400429AEC /* DatePickerPopUp.swift in Sources */,
 				1AD32DFF1B2B3B9100429AEC /* ViewController.swift in Sources */,
+				1AD32E271B2B503D00429AEC /* DateFormat.swift in Sources */,
 				1AD32DFD1B2B3B9100429AEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +443,7 @@
 				1AD32E181B2B3B9100429AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AD32E191B2B3B9100429AEC /* Build configuration list for PBXNativeTarget "DatePickerPopUpMechanicTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +452,7 @@
 				1AD32E1B1B2B3B9100429AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
