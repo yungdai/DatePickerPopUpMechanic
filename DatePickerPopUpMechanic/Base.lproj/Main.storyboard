@@ -36,12 +36,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-DW-928">
-                                        <rect key="frame" x="222" y="75" width="125" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjR-I4-146">
                                         <rect key="frame" x="267" y="170" width="34" height="30"/>
                                         <state key="normal" title="Save">
@@ -51,21 +45,26 @@
                                             <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nou-fZ-r0T"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-DW-928">
+                                        <rect key="frame" x="222" y="75" width="125" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="enl-Lp-wFW" firstAttribute="leading" secondItem="m8W-I5-HDV" secondAttribute="leading" constant="8" id="03B-WI-8YK"/>
                                     <constraint firstAttribute="centerX" secondItem="G9d-AU-qIJ" secondAttribute="centerX" id="4mq-M9-PZj"/>
-                                    <constraint firstAttribute="centerY" secondItem="2fa-DW-928" secondAttribute="centerY" constant="33" id="ICD-WR-lgE"/>
                                     <constraint firstAttribute="centerY" secondItem="QxL-kZ-smt" secondAttribute="centerY" constant="66.5" id="Ioe-xq-1Ds"/>
                                     <constraint firstAttribute="centerY" secondItem="mjR-I4-146" secondAttribute="centerY" constant="-66.5" id="LgW-a1-jGL"/>
                                     <constraint firstAttribute="centerY" secondItem="G9d-AU-qIJ" secondAttribute="centerY" constant="100" id="OtT-M8-vFd"/>
                                     <constraint firstAttribute="centerX" secondItem="QxL-kZ-smt" secondAttribute="centerX" id="W0t-fP-3eY"/>
                                     <constraint firstAttribute="centerX" secondItem="enl-Lp-wFW" secondAttribute="centerX" id="W29-Lk-kvz"/>
-                                    <constraint firstAttribute="centerX" secondItem="2fa-DW-928" secondAttribute="centerX" id="ZNB-LE-bcm"/>
-                                    <constraint firstAttribute="centerY" secondItem="2fa-DW-928" secondAttribute="centerY" constant="33" id="fZj-IB-DXn"/>
+                                    <constraint firstAttribute="centerX" secondItem="2fa-DW-928" secondAttribute="centerX" constant="-0.5" id="b2a-Lh-Dlg"/>
                                     <constraint firstAttribute="height" constant="237" id="fgB-SX-NLh"/>
                                     <constraint firstItem="QxL-kZ-smt" firstAttribute="leading" secondItem="m8W-I5-HDV" secondAttribute="leading" constant="8" id="irX-wZ-ahB"/>
+                                    <constraint firstAttribute="centerY" secondItem="2fa-DW-928" secondAttribute="centerY" constant="33" id="kDE-dq-zNo"/>
                                     <constraint firstAttribute="centerY" secondItem="enl-Lp-wFW" secondAttribute="centerY" constant="-0.5" id="sPG-mP-evn"/>
                                     <constraint firstAttribute="trailing" secondItem="QxL-kZ-smt" secondAttribute="trailing" constant="8" id="sXn-he-TQP"/>
                                     <constraint firstAttribute="centerX" secondItem="mjR-I4-146" secondAttribute="centerX" id="y73-MT-w8r"/>
