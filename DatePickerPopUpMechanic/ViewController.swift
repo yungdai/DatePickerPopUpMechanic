@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
          resign()
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-            dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+            dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
             let initDate : NSDate? = dateFormatter.dateFromString(dateOfBirthTextField.text)
             
             let dataChangeCallBack : DatePickerPopUp.PopDatePickerCallback = { (newDate : NSDate, forTextField : UITextField)->() in

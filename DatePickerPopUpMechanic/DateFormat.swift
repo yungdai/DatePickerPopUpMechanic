@@ -15,7 +15,7 @@ extension NSDate {
         
         let formatter = NSDateFormatter()
         formatter.dateStyle = .MediumStyle;
-        formatter.timeStyle = .NoStyle;
+        formatter.timeStyle = .ShortStyle;
         return formatter.stringFromDate(self)
     }
 }
