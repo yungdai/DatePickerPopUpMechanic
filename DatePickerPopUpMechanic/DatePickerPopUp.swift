@@ -50,6 +50,7 @@ class DatePickerPopUp: NSObject, UIPopoverPresentationControllerDelegate, DatePi
         }
     }
     
+    // We are telling to the popover presentation controller that the presentation must be not adaptive at all and so it uses the popover also on the iPhone.
     func adaptivePresentationStyleForPresentationController(PC: UIPresentationController) -> UIModalPresentationStyle {
         
         return .None
