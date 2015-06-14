@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+// create a delegate for the DatePickerrViewontroller
 protocol DatePickerViewControllerDelgate : class {
     
     func datePickerVCDismissed(date : NSDate?)
@@ -18,6 +20,8 @@ class DatePickerViewController: UIViewController {
 
     @IBOutlet var container: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+
     weak var delegate: DatePickerViewControllerDelgate?
     
     var currentDate : NSDate? {
@@ -26,10 +30,13 @@ class DatePickerViewController: UIViewController {
         }
     }
     
+    
+    // initialise the DatePickerPopUp View
     convenience init() {
-        
         self.init(nibName: "DatePickerPopUp", bundle: nil)
     }
+    
+    
     
     func updatePickerCurrentDate() {
         
@@ -40,6 +47,7 @@ class DatePickerViewController: UIViewController {
         }
     }
     
+    // when you press the oken button
     @IBAction func okAction(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true) {

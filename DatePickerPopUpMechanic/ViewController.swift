@@ -28,15 +28,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.resignFirstResponder()
     }
     
+    // function to format the pop update style dates as well as get the retrieve the data back from the picker
+    
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         if (textField === dateOfBirthTextField) {
+            // make sure that the keyboard doesn't show up when you tap the text field entry box
          resign()
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
             dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
             let initDate : NSDate? = dateFormatter.dateFromString(dateOfBirthTextField.text)
             
-            let dataChangeCallBack : DatePickerPopUp.PopDatePickerCallback = { (newDate : NSDate, forTextField : UITextField)->() in
+            let dataChangeCallBack : DatePickerPopUp.DatePickerPopUpCallBack = { (newDate : NSDate, forTextField : UITextField)->() in
                 
                 forTextField.text = (newDate.ToDateMediumString() ?? "?") as String
             
@@ -56,9 +59,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func saveButtonPressed(sender: AnyObject) {
         var msg : String
+        // check for empty fields
         if nameTextField.text != "" && dateOfBirthTextField.text != "" {
             msg = nameTextField.text + " " + dateOfBirthTextField.text
         } else {
+            // error checking
             msg = "Name or Date empty!"
         }
         let alert:UIAlertController = UIAlertController(title: title, message: msg, preferredStyle:.Alert)

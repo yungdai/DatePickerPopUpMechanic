@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+// create an extension for NSDate function for the medium string style for the date and short style for time
 extension NSDate {
     
     // -> Date System Formatted Medium

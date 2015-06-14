@@ -10,12 +10,12 @@ import UIKit
 
 class DatePickerPopUp: NSObject, UIPopoverPresentationControllerDelegate, DatePickerViewControllerDelgate {
     
-    typealias PopDatePickerCallback = (newDate : NSDate, forTextField : UITextField)->()
+    typealias DatePickerPopUpCallBack = (newDate : NSDate, forTextField : UITextField)->()
     
     var datePickerVC : DatePickerViewController
     var popover : UIPopoverPresentationController?
     var textField : UITextField!
-    var dataChanged : PopDatePickerCallback?
+    var dataChanged : DatePickerPopUpCallBack?
     var presented = false
     var offset : CGFloat = 8.0
     
@@ -26,7 +26,8 @@ class DatePickerPopUp: NSObject, UIPopoverPresentationControllerDelegate, DatePi
         super.init()
     }
     
-    func pick(inViewController : UIViewController, initDate : NSDate?, dataChanged : PopDatePickerCallback) {
+    // popup picker callback function
+    func pick(inViewController : UIViewController, initDate : NSDate?, dataChanged : DatePickerPopUpCallBack) {
         
         if presented {
             return  // we are busy
@@ -38,11 +39,11 @@ class DatePickerPopUp: NSObject, UIPopoverPresentationControllerDelegate, DatePi
         datePickerVC.currentDate = initDate
         
         popover = datePickerVC.popoverPresentationController
-        if let _popover = popover {
+        if let popped = popover {
             
-            _popover.sourceView = textField
-            _popover.sourceRect = CGRectMake(self.offset,textField.bounds.size.height,0,0)
-            _popover.delegate = self
+            popped.sourceView = textField
+            popped.sourceRect = CGRectMake(self.offset,textField.bounds.size.height,0,0)
+            popped.delegate = self
             self.dataChanged = dataChanged
             inViewController.presentViewController(datePickerVC, animated: true, completion: nil)
             presented = true
