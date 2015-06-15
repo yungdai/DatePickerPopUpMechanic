@@ -1,4 +1,4 @@
-//
+    //
 //  DatePickerViewController.swift
 //  DatePickerPopUpMechanic
 //
@@ -47,7 +47,7 @@ class DatePickerViewController: UIViewController {
         }
     }
     
-    // when you press the oken button
+    // when you press the ok button
     @IBAction func okAction(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(true) {

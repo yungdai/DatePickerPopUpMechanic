@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     var datePickerPopUp : DatePickerPopUp?
+    var textPickerPopup : PickerViewPickerPopUp?
 
     @IBOutlet weak var dateOfBirthTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         datePickerPopUp = DatePickerPopUp(forTextField: dateOfBirthTextField)
         dateOfBirthTextField.delegate = self
+        nameTextField.delegate = self
 
     }
     
@@ -46,6 +48,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
             datePickerPopUp!.pick(self, initDate: initDate, dataChanged: dataChangeCallBack)
+            return false
+        } else if (textField == nameTextField) {
+            resign()
+            let initString : String = nameTextField.text
+            let dataChangedCallBack : PickerViewPickerPopUp.PickerViewPickerPopUpCallBack = { (newText : String, forTextField: UITextField) ->() in
+            
+            forTextField.text = newText
+                
+            }
+            
+            textPickerPopup!.pick(self, initString: initString, dataChanged: dataChangedCallBack)
             return false
         } else {
             return true
