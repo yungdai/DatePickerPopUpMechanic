@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
             dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-            let initDate : NSDate? = dateFormatter.dateFromString(dateOfBirthTextField.text)
+            let initDate : NSDate? = dateFormatter.dateFromString(dateOfBirthTextField.text!)
             
             let dataChangeCallBack : DatePickerPopUp.DatePickerPopUpCallBack = { (newDate : NSDate, forTextField : UITextField)->() in
                 
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var msg : String
         // check for empty fields
         if nameTextField.text != "" && dateOfBirthTextField.text != "" {
-            msg = nameTextField.text + " " + dateOfBirthTextField.text
+            msg = nameTextField.text! + " " + dateOfBirthTextField.text!
         } else {
             // error checking
             msg = "Name or Date empty!"
