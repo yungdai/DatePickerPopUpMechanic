@@ -36,7 +36,7 @@ class PickerViewPickerPopUp: NSObject, UIPopoverPresentationControllerDelegate, 
         pickerViewVC.delegate = self
         pickerViewVC.modalPresentationStyle = UIModalPresentationStyle.Popover
         pickerViewVC.preferredContentSize = CGSizeMake(500, 208)
-        pickerViewVC.selectedText = initString
+//        pickerViewVC.selectedText = initString
         
         popover = pickerViewVC.popoverPresentationController
         

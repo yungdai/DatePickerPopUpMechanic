@@ -21,32 +21,23 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet var container: UIView!
     @IBOutlet weak var textPicker: UIPickerView!
     
-//    var selectedActivity = String()
-    
-    
     
     let activities = ["Watch TV", "Go For Drinks", "Play Sports", "Watch a Movie", "Go To An Event"]
     
     weak var delegate: PickerViewControllerDelegate?
     
-    var selectedText : String? {
-        didSet {
-            updatePickerCurrentText()
-        }
-    }
-    
-    func updatePickerCurrentText() {
-        if let selectedText = self.selectedText {
-            if let textPicker = self.textPicker {
-                var selectedRow = self.textPicker.selectedRowInComponent(0)
-                var activityString = self.activities[selectedRow]
-                self.delegate?.pickerVCDismissed(activityString)
-            }
-        }
-    }
+    // atttention.  Ensure that you have connected the datasource and the delegate to the .xib File's owner
     
     convenience init() {
         self.init(nibName: "PickerViewPickerPopUp", bundle: nil)
+        
+
+        // programaticaly 
+        /*
+        textPicker.delegate = self
+        textPicker.dataSource = self
+        
+        */
     }
     
     
@@ -60,10 +51,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-////        updatePickerCurrentText()
-//    }
+
 
     // returns the number of 'columns' to display.
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

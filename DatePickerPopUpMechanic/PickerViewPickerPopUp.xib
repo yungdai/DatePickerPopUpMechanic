@@ -32,6 +32,10 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="163" id="O1j-58-jzD"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZMa-ZY-C7I"/>
+                        <outlet property="delegate" destination="-1" id="rPe-1j-Pp9"/>
+                    </connections>
                 </pickerView>
             </subviews>
             <animations/>
